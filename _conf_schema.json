@@ -1,0 +1,57 @@
+{
+  "enabled": {
+    "type": "bool",
+    "description": "启用双模式群聊接话",
+    "default": true
+  },
+  "enabled_group_ids": {
+    "type": "list",
+    "description": "生效群号",
+    "hint": "留空表示所有群聊生效；每项填写一个 QQ 群号。",
+    "default": []
+  },
+  "reply_probability": {
+    "type": "float",
+    "description": "普通模式接话概率",
+    "hint": "建议范围 0–1，默认 0.33。",
+    "default": 0.33
+  },
+  "high_frequency_probability": {
+    "type": "float",
+    "description": "高频模式接话概率",
+    "hint": "成功自动接话后使用，默认 0.8。",
+    "default": 0.8
+  },
+  "high_frequency_duration_seconds": {
+    "type": "int",
+    "description": "高频状态持续时间（秒）",
+    "hint": "每次成功自动接话后从当前时间重新计算。",
+    "default": 90
+  },
+  "min_group_interval_seconds": {
+    "type": "int",
+    "description": "普通模式同群最短接话间隔（秒）",
+    "default": 75
+  },
+  "min_user_interval_seconds": {
+    "type": "int",
+    "description": "普通模式同一用户最短接话间隔（秒）",
+    "default": 180
+  },
+  "max_replies_per_10_minutes": {
+    "type": "int",
+    "description": "普通模式每群 10 分钟最多接话次数",
+    "default": 3
+  },
+  "min_text_chars": {
+    "type": "int",
+    "description": "触发接话的最短文本长度",
+    "default": 2
+  },
+  "ignored_sender_ids": {
+    "type": "list",
+    "description": "忽略的机器人发送者 QQ 号",
+    "hint": "这些账号的消息仍可进入群聊上下文，但不会触发接话或直接回复。",
+    "default": []
+  }
+}
